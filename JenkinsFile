@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+ 
+  tools {nodejs "NodeJs 11.10.0"}
+ 
+  stages {
+        stage('Build') {
+            steps {
+                echo 'Config ls ..'
+                sh 'npm config ls'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Config list..'
+                sh 'npm config list'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Config....'
+                sh 'npm config ls'
+            }
+        }
+    }
+}
